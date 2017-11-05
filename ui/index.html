@@ -14,6 +14,20 @@
         
         <a href="page1.html">gooo</a>
         
+        <form name="f">
+        <input type=text name="t1">
+        <input type=text name="t2">
+        <input type=submit value="ok" name="submit" onclick="onsub()">
+        </form>
+        
+        <script>
+        function onsub(){
+            var r=document.f.t1.value;
+            document.f.t2.value=r;}
+            
+        </script>
+        
+        
         </div>
         <script type="text/javascript" src="/ui/main.js">
         </script>
