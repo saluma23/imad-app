@@ -1,9 +1,9 @@
 <html>
-<head><\head>
+<head></head>
   <body>
 <?php
 echo"hiiiiiiiii";
 ?>
     
     </body>
-<\html>
+</html>
