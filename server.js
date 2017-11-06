@@ -46,7 +46,9 @@ app.get('/test-db', function (req, res) {
         }
         else{
             res.send(JSON.Stringify(result.rows));
+        }
         });
+    
   
 });
 
