@@ -1,4 +1,5 @@
 <?php
+
 $db=pg_connect('host=localhost:5432
                dbname=samohdsalman
                user=samohdsalman
