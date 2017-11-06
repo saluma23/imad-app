@@ -22,6 +22,10 @@ app.get('/page1.html', function(req,res){
     res.sendFile(path.join(__dirname,'ui','page1.html'));
 });
 
+app.get('/db.php', function(req,res)
+{
+    res.sendFile(path.join(__dirname,'ui','db.php'));
+});
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
