@@ -23,31 +23,9 @@
         <script>
         function onsub(){
             var r=document.f.t1.value;
-           // document.f.t2.value=r;
+            document.f.t2.value=r;
             
-            
-            var Pool=require('pg').Pool;
-var config={
-    user:'samohdsalman',
-    database:'samohdsalman',
-    host:'db.imad.hasura-app.io',
-    port:'5432',
-    password:process.env.DB_PASSWORD
-};
-            
-       
-       
-       var pool=new Pool(config);
-
-
-    pool.query('SELECT * FROM test',function (err, result) {
-        if(err){
-            res.status(500).send(err.toString());
-        }
-        else{
-          document.f.t2.value = Integer.parseInt(result.rows);
-        }
-        });
+         
 
 
        
