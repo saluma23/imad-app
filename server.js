@@ -51,7 +51,7 @@ app.get('/page1.html', function(req,res){
 });
 
 
-app.get('/ing.jsp', function(req,res){
+app.get('/ind.jsp', function(req,res){
     res.sendFile(path.join(__dirname,'ui','ind.jsp'));
     
   
