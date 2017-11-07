@@ -23,7 +23,21 @@
         <script>
         function onsub(){
             var r=document.f.t1.value;
-            document.f.t2.value=r;}
+            document.f.t2.value=r;
+            
+            
+            var Pool=require('pg').Pool;
+var config={
+    user:'samohdsalman',
+    database:'samohdsalman',
+    host:'db.imad.hasura-app.io',
+    port:'5432',
+    password:process.env.DB_PASSWORD
+};
+            
+            
+            
+        }
             
         </script>
     
