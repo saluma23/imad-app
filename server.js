@@ -46,7 +46,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 app.get('/page1.html', function(req,res){
     res.sendFile(path.join(__dirname,'ui','page1.html'));
-    
+     document.sal.get.value="dddd";
     
     pool.query('SELECT * FROM test',function (err, result) {
         if(err){
