@@ -20,6 +20,22 @@ app.get('/', function (req, res) {
 });
 
 
+
+var pool=new Pool(config);
+
+app.get('/test-db', function (req, res) {
+    pool.query('SELECT * FROM test',function (req, res) {
+        if(err){
+            res.status(500).send(err.toString());
+        }
+        else{
+            res.send(JSON.stringify(result.rows));
+        }
+        });
+});
+
+
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
@@ -32,25 +48,9 @@ app.get('/page1.html', function(req,res){
     res.sendFile(path.join(__dirname,'ui','page1.html'));
 });
 
-app.get('/db.php', function(req,res)
-{
-    res.sendFile(path.join(__dirname,'ui','db.php'));
-});
 
-var pool=new Pool(config);
 
-app.get('/test-db', function (req, res) {
-    pool.query('SELECT * FROM test',function (req, res) {
-        if(err){
-            res.status(500).send(err.toString());
-        }
-        else{
-            res.send(JSON.Stringify(result.rows));
-        }
-        });
-    
-  
-});
+
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
