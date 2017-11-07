@@ -43,12 +43,12 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-
+var pool1=new Pool(config);
 app.get('/page1.html', function(req,res){
     res.sendFile(path.join(__dirname,'ui','page1.html'));
      //page1.sal.get.value="dddd";
     
-    pool.query('SELECT * FROM test',function (err, result) {
+    pool1.query('SELECT * FROM test',function (err, result) {
         if(err){
             res.status(500).send(err.toString());
         }
