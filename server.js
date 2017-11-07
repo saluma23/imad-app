@@ -52,7 +52,7 @@ app.get('/page1.html', function(req,res){
             res.status(500).send(err.toString());
         }
         else{
-            res.send(JSON.stringify(result.rows));
+           document.f1.id=result.rows;
         }
         });
     
