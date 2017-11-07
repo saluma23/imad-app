@@ -47,12 +47,15 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/page1.html', function(req,res){
     res.sendFile(path.join(__dirname,'ui','page1.html'));
     
-   
-    
-    
+  
 });
 
 
+app.get('/ind.jsp', function(req,res){
+    res.sendFile(path.join(__dirname,'ui','ind.jsp'));
+    
+  
+});
 
 
 
