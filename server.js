@@ -45,7 +45,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 var pool1=new Pool(config);
 app.get('/page1.html', function(req,res){
-    //res.sendFile(path.join(__dirname,'ui','page1.html'));
+    res.sendFile(path.join(__dirname,'ui','page1.html'));
      //page1.sal.get.value="dddd";
     
     pool1.query('SELECT * FROM test',function (err, result) {
@@ -53,7 +53,7 @@ app.get('/page1.html', function(req,res){
             res.status(500).send(err.toString());
         }
         else{
-           res.send(JSON.stringify(result.rows[1].name));
+           out.println(result.rows[1].name);
         }
         });
 
