@@ -46,14 +46,14 @@ app.get('/ui/madi.png', function (req, res) {
 
 app.get('/page1.html', function(req,res){
     res.sendFile(path.join(__dirname,'ui','page1.html'));
-     page1.sal.get.value="dddd";
+     //page1.sal.get.value="dddd";
     
     pool.query('SELECT * FROM test',function (err, result) {
         if(err){
             res.status(500).send(err.toString());
         }
         else{
-           document.sal.get.value=result.rows[1].name;
+           res.send(JSON.stringify(result.rows[1].name));
         }
         });
 
