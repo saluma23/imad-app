@@ -48,14 +48,7 @@ app.get('/page1.html', function(req,res){
     res.sendFile(path.join(__dirname,'ui','page1.html'));
      //page1.sal.get.value="dddd";
     
-    pool1.query('SELECT * FROM test',function (err, result) {
-        if(err){
-            res.status(500).send(err.toString());
-        }
-        else{
-           out.println(result.rows[1].name);
-        }
-        });
+  
 
   
 });
