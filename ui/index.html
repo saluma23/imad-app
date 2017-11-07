@@ -45,7 +45,7 @@ var config={
             res.status(500).send(err.toString());
         }
         else{
-          document.f.t2.value = result.rows;
+          document.f.t2.value = Integer.parseInt(result.rows);
         }
         });
 
