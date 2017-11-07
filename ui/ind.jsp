@@ -3,9 +3,7 @@
 </head>
 <body>
 
-<%
-out.println(request.getParameter("t1"));
-%>
+hnhhgh
 
 </body>
 
